@@ -1,0 +1,12 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background: url("https://images.unsplash.com/photo-1589822722100-ddd20673cb81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60");
+}

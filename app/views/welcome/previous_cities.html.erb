@@ -1,0 +1,14 @@
+<% @cities.each do |c| %>
+<div class="panel panel-default">
+  <div class="panel-body">
+  <%= link_to city_path(zip: c.zip) do %>
+    <%= c.zip %>
+    <%= c.location %>
+  <% end %>
+  </div>
+</div>    
+
+
+
+
+<% end %>

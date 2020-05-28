@@ -1,0 +1,14 @@
+<br>
+<%= form_tag(index_path) do %>
+    <%= text_field_tag :zip, nil, class: "form-control", placeholder: "Enter zip for weather"  %>
+    <%= submit_tag "Check Weather", class: "btn btn-block btn-primary"%>
+<% end %>
+
+<!-- If zip can be found and there is no error -->
+<% if (@location != nil && @location != "") && (@error == "" || @error == nil )%>
+    <%= render "weather" %>
+<% elsif @status == "404" || @status == "400" %> <!-- There is an error -->
+    <div style="color: red;">
+        Error: <%= @error %>
+    </div>
+<% end %>
